@@ -1,7 +1,7 @@
 
 # Webcams, Predictions, and Weather
 
-One Paragraph of project description goes here
+Script to process the YVR-weather and KatKam image data into training and validation datasets then build a CNN model used to classify KatKam weather images into 4 weather labels.
 
 ## Getting Started
 
@@ -34,27 +34,3 @@ Directory Structure:
 
 
 
-
-
-```python
-## Running the tests
-
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-```
