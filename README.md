@@ -1,7 +1,7 @@
 
 # Webcams, Predictions, and Weather
 
-Script to process the YVR-weather and KatKam image data into training and validation datasets then build a CNN model used to classify KatKam weather images into 4 weather labels.
+Script to process the YVR-weather and KatKam image data into training and validation datasets, extracts image features from a VGG16 CNN, then runs various machine learning algorithms on the features.
 
 ## Getting Started
 
@@ -18,36 +18,43 @@ Keras
 
 2. Download, extract, and move the 'yvr-weather' folder into the main folder.
 
-3. In CLI, run python3 Weather+Webcam+.py. 
+3. In CLI, run python Weather+Webcam+.py. 
 
 Directory Structure:
 
 - Main/ (Directory containing Weather+Webcam+.py)
  - katkam-scaled/
  - yvr-weather/
+ 
 ### Running the Script
 
 usage: Weather+Webcam+.py [-p] [-vgg16] [-n] [-s] [-r] [-t PREDICT_IMG] [-h]
 
 Script to run the program.
 
-optional arguments:
-  -p, --process_data    Run this first time to process the image and weather
-                        dataset.
+##### arguments:
+
+  -p, --process_data    [Run this first time to process the image and weather
+                        dataset.]
+                        
   -vgg16, --get_features_from_vgg16
-                        Run this the first time to extract features from the
-                        image dataset off VGG16.
-  -n, --test_neuralnet  Run this to test the features on a neural net.
-  -s, --test_svm        Run this to test the features on a svm.
-  -r, --test_randomforest
-                        Run this to test the features on a random forest.
-  -t PREDICT_IMG, --predict_img PREDICT_IMG
-                        Run the rf classifier to predict the weather on the
-                        img.
-  -h, --help            Show this message and exit.
+                        [Run this the first time to extract features from the
+                        image dataset off VGG16.]
+                        
+  -n, --test_neuralnet  [Run this to test the features on a neural net.]
   
-Must run --process_data --get_features_from_vgg16 first time to process datasets and 
-extract features.
+  -s, --test_svm        [Run this to test the features on a svm.]
+  
+  -r, --test_randomforest
+                        [Run this to test the features on a random forest.]
+                        
+  -t PREDICT_IMG, --predict_img PREDICT_IMG
+                        [Run the rf classifier to predict the weather on the
+                        img.]
+                        
+  -h, --help            [Show this message and exit.]
+  
+##### Must run --process_data --get_features_from_vgg16 first time to process datasets and extract features.
 
 ### Results
 
@@ -157,8 +164,14 @@ Epoch 50/50
 960/960 [==============================] - 0s - loss: 0.1973 - acc: 0.9281 - val_loss: 0.2141 - val_acc: 0.9375
 
 #### Random Forest score on features:
-('random forest accuracy on validation data: ', 0.9437499)
+('random forest accuracy on validation data: ', 0.94374999999999998)
 
+
+### Image Predictions
+
+![](cloudy_predict.png)
+
+![](snow_predict.png)
 
 
 
