@@ -48,7 +48,7 @@ Script to run the program.
   -r, --test_randomforest
                         [Run this to test the features on a random forest.]
                         
-  -t PREDICT_IMG, --predict_img PREDICT_IMG
+  -t [filename], --predict_img [filename]
                         [Run the rf classifier to predict the weather on the
                         img.]
                         
