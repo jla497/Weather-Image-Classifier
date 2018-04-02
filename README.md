@@ -1,7 +1,7 @@
 
 # Webcams, Predictions, and Weather
 
-Script to process the YVR-weather and KatKam image data into training and validation datasets, extracts image features from a VGG16 CNN, then runs various machine learning algorithms on the features.
+Weather-Image Classifier processes the YVR-weather and KatKam image data into training and validation datasets, extracts image features from a VGG16 CNN, and then runs machine learning algorithms on the features.
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ Tensorflow
 Theanos
 Keras
 
-1. Download, extract, and move katkam-scaled folder into the main folder.
+1. Download, extract, and move the 'katkam-scaled' folder into the main folder.
 
 2. Download, extract, and move the 'yvr-weather' folder into the main folder.
 
@@ -26,13 +26,12 @@ Directory Structure:
  - katkam-scaled/
  - yvr-weather/
  
-### Running the Script
+### Running Weather-Image-Classifier
 
-usage: Weather+Webcam+.py [-p] [-vgg16] [-n] [-s] [-r] [-t PREDICT_IMG] [-h]
-
-Script to run the program.
-
-##### arguments:
+```
+Weather+Webcam+.py [-p] [-vgg16] [-n] [-s] [-r] [-t PREDICT_IMG] [-h]
+```
+##### Arguments:
 
   -p, --process_data    [Run this first time to process the image and weather
                         dataset.]
@@ -74,7 +73,3 @@ Epoch 50/50
 ![](cloudy_predict.png)
 
 ![](snow_predict.png)
-
-
-
-
